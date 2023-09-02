@@ -7,11 +7,14 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// Routes is the struct that defines the routes.
 type Routes struct {
 	Engine  *gin.Engine
 	Handler *handlers.Handler
 }
 
+// New returns a new Routes instance.
+// It also sets up the Gin engine and the CORS middleware.
 func New() *Routes {
 
 	engine := gin.Default()
@@ -26,6 +29,7 @@ func New() *Routes {
 	}
 }
 
+// Register registers all routes.
 func (r *Routes) Register(group string) {
 	api := r.Engine.Group(group)
 	api.POST("password/verify", r.Handler.Verify)

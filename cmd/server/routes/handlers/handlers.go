@@ -9,10 +9,12 @@ import (
 	"github.com/gin-gonic/gin/binding"
 )
 
+// Handler is the struct that contains the service instances.
 type Handler struct {
 	PasswordService password.UseCase
 }
 
+// New returns a new Handler instance.
 func New() *Handler {
 	return &Handler{}
 }
