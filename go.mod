@@ -1,4 +1,4 @@
-module github.com/difmaj/password-validator-challenge
+module github.com/difmaj/password-validator
 
 go 1.21.0
 

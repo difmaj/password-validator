@@ -1,6 +1,6 @@
 package entity
 
-import "github.com/difmaj/password-validator-challenge/internal/pkg/password/enum"
+import "github.com/difmaj/password-validator/internal/pkg/password/enum"
 
 // Rule is the entity that defines the rules of the password.
 type Rule struct {

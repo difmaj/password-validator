@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"github.com/difmaj/password-validator-challenge/cmd/server/routes/handlers"
+	"github.com/difmaj/password-validator/cmd/server/routes/handlers"
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"

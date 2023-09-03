@@ -10,7 +10,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/difmaj/password-validator-challenge/cmd/server/routes"
+	"github.com/difmaj/password-validator/cmd/server/routes"
 	"github.com/joho/godotenv"
 )
 

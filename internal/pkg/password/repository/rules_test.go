@@ -3,7 +3,7 @@ package repository
 import (
 	"testing"
 
-	"github.com/difmaj/password-validator-challenge/internal/pkg/password/enum"
+	"github.com/difmaj/password-validator/internal/pkg/password/enum"
 )
 
 type testRule map[string]struct {

@@ -3,7 +3,7 @@ package password
 import (
 	"fmt"
 
-	"github.com/difmaj/password-validator-challenge/internal/pkg/password/entity"
+	"github.com/difmaj/password-validator/internal/pkg/password/entity"
 )
 
 // Service is the struct that implements the UseCase interface.

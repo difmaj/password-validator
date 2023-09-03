@@ -1,4 +1,4 @@
-# password-validator-challenge
+# password-validator
 
 ## Description
 

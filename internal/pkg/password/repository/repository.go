@@ -1,8 +1,8 @@
 package repository
 
 import (
-	"github.com/difmaj/password-validator-challenge/internal/pkg/password"
-	"github.com/difmaj/password-validator-challenge/internal/pkg/password/enum"
+	"github.com/difmaj/password-validator/internal/pkg/password"
+	"github.com/difmaj/password-validator/internal/pkg/password/enum"
 )
 
 // Repository is the struct that implements the password.Repository interface.

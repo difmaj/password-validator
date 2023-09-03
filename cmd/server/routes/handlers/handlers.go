@@ -3,8 +3,8 @@ package handlers
 import (
 	"net/http"
 
-	"github.com/difmaj/password-validator-challenge/internal/pkg/password"
-	"github.com/difmaj/password-validator-challenge/internal/pkg/password/entity"
+	"github.com/difmaj/password-validator/internal/pkg/password"
+	"github.com/difmaj/password-validator/internal/pkg/password/entity"
 	"github.com/gin-gonic/gin"
 	"github.com/gin-gonic/gin/binding"
 )
