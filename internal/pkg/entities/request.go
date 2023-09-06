@@ -1,4 +1,4 @@
-package entity
+package entities
 
 // Rule is the entity that defines the rules of the password.
 type Request struct {

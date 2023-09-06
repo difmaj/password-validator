@@ -3,25 +3,31 @@ package handlers
 import (
 	"net/http"
 
-	"github.com/difmaj/password-validator/internal/pkg/password"
-	"github.com/difmaj/password-validator/internal/pkg/password/entity"
+	"github.com/difmaj/password-validator/internal/pkg/entities"
+	"github.com/difmaj/password-validator/internal/pkg/repositories/password"
+	"github.com/difmaj/password-validator/internal/pkg/services"
 	"github.com/gin-gonic/gin"
 	"github.com/gin-gonic/gin/binding"
 )
 
-// Handler is the struct that contains the service instances.
-type Handler struct {
-	PasswordService password.UseCase
+// PasswordHandler is the struct that contains the service instances.
+type PasswordHandler struct {
+	PasswordService *services.PasswordService
 }
 
-// New returns a new Handler instance.
-func New() *Handler {
-	return &Handler{}
+// NewPasswordHandler returns a new Handler instance.
+func NewPasswordHandler() *PasswordHandler {
+	return &PasswordHandler{
+		PasswordService: services.NewPasswordService(
+			password.NewRepository(),
+		),
+	}
 }
 
-func (h *Handler) Verify(ctx *gin.Context) {
+// Verify is the handler function that validates the password.
+func (h *PasswordHandler) Verify(ctx *gin.Context) {
 
-	request := new(entity.Request)
+	request := new(entities.Request)
 	if err := ctx.ShouldBindBodyWith(request, binding.JSON); err != nil {
 		ctx.Error(err)
 		return

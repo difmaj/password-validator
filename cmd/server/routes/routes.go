@@ -10,7 +10,7 @@ import (
 // Routes is the struct that defines the routes.
 type Routes struct {
 	Engine  *gin.Engine
-	Handler *handlers.Handler
+	Handler *handlers.PasswordHandler
 }
 
 // New returns a new Routes instance.
@@ -25,7 +25,7 @@ func New() *Routes {
 
 	return &Routes{
 		Engine:  engine,
-		Handler: handlers.New(),
+		Handler: handlers.NewPasswordHandler(),
 	}
 }
 

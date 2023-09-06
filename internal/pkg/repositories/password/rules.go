@@ -1,22 +1,22 @@
-package repository
+package password
 
 import (
 	"unicode"
 
-	"github.com/difmaj/password-validator/internal/pkg/password/enum"
+	"github.com/difmaj/password-validator/internal/pkg/entities/enums"
 )
 
 // Rule is the type that defines the rules of the password.
 type Rule func(string, int) (bool, error)
 
 // rules is the map of rules.
-var rules = map[enum.Rule]Rule{
-	enum.MinSize:         MinSize,
-	enum.MinUppercase:    MinUppercase,
-	enum.MinLowercase:    MinLowercase,
-	enum.MinDigit:        MinDigit,
-	enum.MinSpecialChars: MinSpecialChars,
-	enum.NoRepeted:       NoRepeted,
+var rules = map[enums.Rule]Rule{
+	enums.MinSize:         MinSize,
+	enums.MinUppercase:    MinUppercase,
+	enums.MinLowercase:    MinLowercase,
+	enums.MinDigit:        MinDigit,
+	enums.MinSpecialChars: MinSpecialChars,
+	enums.NoRepeted:       NoRepeted,
 }
 
 // MinSize check that pwd has at least {Rule.Value) characters.

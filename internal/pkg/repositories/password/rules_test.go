@@ -1,9 +1,9 @@
-package repository
+package password
 
 import (
 	"testing"
 
-	"github.com/difmaj/password-validator/internal/pkg/password/enum"
+	"github.com/difmaj/password-validator/internal/pkg/entities/enums"
 )
 
 type testRule map[string]struct {
@@ -12,11 +12,11 @@ type testRule map[string]struct {
 	want     bool
 }
 
-type testRules map[enum.Rule]testRule
+type testRules map[enums.Rule]testRule
 
 func TestRules(t *testing.T) {
 	tests := testRules{
-		enum.MinSize: {
+		enums.MinSize: {
 			"invalid": {
 				password: "1234567",
 				value:    8,
@@ -28,7 +28,7 @@ func TestRules(t *testing.T) {
 				want:     true,
 			},
 		},
-		enum.MinUppercase: {
+		enums.MinUppercase: {
 			"invalid": {
 				password: "abc",
 				value:    1,
@@ -40,7 +40,7 @@ func TestRules(t *testing.T) {
 				want:     true,
 			},
 		},
-		enum.MinLowercase: {
+		enums.MinLowercase: {
 			"invalid": {
 				password: "ABC",
 				value:    1,
@@ -52,7 +52,7 @@ func TestRules(t *testing.T) {
 				want:     true,
 			},
 		},
-		enum.MinDigit: {
+		enums.MinDigit: {
 			"invalid": {
 				password: "abc",
 				value:    1,
@@ -64,7 +64,7 @@ func TestRules(t *testing.T) {
 				want:     true,
 			},
 		},
-		enum.MinSpecialChars: {
+		enums.MinSpecialChars: {
 			"invalid": {
 				password: "abc",
 				value:    1,
@@ -76,7 +76,7 @@ func TestRules(t *testing.T) {
 				want:     true,
 			},
 		},
-		enum.NoRepeted: {
+		enums.NoRepeted: {
 			"invalid": {
 				password: "abcabc",
 				value:    1,

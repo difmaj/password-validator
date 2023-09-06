@@ -1,4 +1,4 @@
-package enum
+package enums
 
 // Rule is the enum that defines the rules of the password.
 type Rule string

@@ -1,8 +1,8 @@
-package repository
+package password
 
 import "errors"
 
-// Repository errors.
+// Password repository errors.
 var (
 	ErrRuleNotFound = errors.New("rule not found")
 )
